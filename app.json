@@ -1,9 +1,7 @@
 {
   "name": "whatsapp-bot (hawk-X)",
-  "description": " Whatsapp bot.",
-  "keywords": [
-    "whatsapp bot"
-  ],
+  "description": "Whatsapp bot.",
+  "keywords": ["whatsapp bot"],
   "repository": "https://github.com/Lgufy/GURU-BOT",
   "stack": "container",
   "env": {
@@ -27,12 +25,12 @@
       "required": false,
       "value": ""
     },
-     "HKEY": {
+    "HKEY": {
       "description": "Put your Heroku api key Here , Get one from here https://dashboard.heroku.com/account",
       "required": true,
       "value": ""
     },
-     "HAPP": {
+    "HAPP": {
       "description": "Put the Heroku app name, same as above entered",
       "required": true,
       "value": ""
@@ -52,13 +50,19 @@
       "required": false,
       "value": "false"
     },
-     "REMOVEBG_KEY": {
+    "REMOVEBG_KEY": {
       "description": "your RemoveBg api key",
       "required": false,
       "value": ""
     }
-    },
-    "buildpacks": [
+  },
+  "scripts": {
+    "update-bio": "node update-bio.js"
+  },
+  "dependencies": {
+    "whatsapp-web.js": "^1.12.3"
+  },
+  "buildpacks": [
     {
       "url": "heroku/nodejs"
     },
@@ -73,4 +77,3 @@
     }
   ]
 }
-
